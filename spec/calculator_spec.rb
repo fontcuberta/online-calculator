@@ -1,7 +1,14 @@
 require 'rspec'
+require 'rack/test'
 require_relative('../lib/calculator.rb')
 
 RSpec.describe('Online Calculator self-corrected exercise') do
+  include Rack::Test::Methods
+
+  def app
+    Sinatra::Application
+  end
+
   context 'Iteration 1' do
     describe '#add' do
       let(:calculator){ Calculator.new }
