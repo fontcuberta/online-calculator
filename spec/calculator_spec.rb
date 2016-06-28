@@ -36,27 +36,6 @@ RSpec.describe('Online Calculator self-corrected exercise') do
   end
 
   context 'Iteration 2' do
-    describe '#suscribe' do
-      context 'when not valid' do
-        it 'receive two parameters' do
-          expect(calculator).to respond_to(:substract).with(2).argument
-        end
-
-        it 'omits the letters as parameters' do
-          expect(calculator.substract(1, "a")).to eq(1)
-        end
-      end
-
-      context 'when valid' do
-        it 'sums the parameters' do
-          expect(calculator.substract(1,1)).to eq(2)
-        end
-
-        it 'sums the parameters as integers' do
-          expect(calculator.substract("1", "1")).to eq(2)
-        end
-      end
-    end
   end
 
   context 'Iteration 3' do
